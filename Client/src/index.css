@@ -72,6 +72,7 @@ textarea {
   flex-wrap: wrap;
 }
 
+.nav-link,
 .nav-button,
 .nav-active {
   border: none;
@@ -80,6 +81,14 @@ textarea {
   background: rgba(255, 255, 255, 0.06);
   color: #f4f7ff;
   cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-button:hover,
+.nav-active:hover {
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .nav-active {
@@ -90,6 +99,38 @@ textarea {
   max-width: 1140px;
   margin: 0 auto;
   padding: 2rem 1.5rem 3rem;
+}
+
+.link-card {
+  color: inherit;
+  text-decoration: none;
+}
+
+.link-card:hover {
+  transform: translateY(-2px);
+}
+
+.admin-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.actions-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.status-note {
+  color: #9bb0d3;
+}
+
+.full-width {
+  grid-column: 1 / -1;
 }
 
 .hero-section {
