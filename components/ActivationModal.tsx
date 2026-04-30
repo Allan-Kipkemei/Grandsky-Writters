@@ -52,7 +52,7 @@ export function ActivationModal({
         <p className="mt-4 font-black text-leaf">Assignment: {job.title}</p>
         <p className="mt-3 text-muted">
           The simulated platform asks for <strong>{formatKsh(500)}</strong> before allowing a bid.
-          This is the exact red flag the classroom exercise is designed to reveal.
+          This interaction is used in class to discuss platform trust, risk checks, and decision quality.
         </p>
 
         <div className="mt-6 flex flex-wrap gap-3">
@@ -74,8 +74,8 @@ export function ActivationModal({
 
         {revealed ? (
           <div className="mt-5 rounded-2xl bg-[#fff1eb] p-4 text-[#9b351d]">
-            <strong>Educational reveal:</strong> Pay-to-bid schemes profit from activation fees,
-            not from real writing work.
+            <strong>Classroom note:</strong> Always verify payment requirements, contracts, and
+            deliverable protections before accepting tasks.
           </div>
         ) : null}
       </div>

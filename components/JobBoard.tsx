@@ -43,10 +43,10 @@ export function JobBoard({ jobs, eduMode, onOpenTask, canAccessTask }: JobBoardP
         <div className="mb-7 flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <div>
             <p className="w-fit rounded-full border border-leaf/20 bg-leaf/10 px-3 py-1 text-xs font-black uppercase tracking-[0.13em] text-leaf">
-              Public job board
+              Live opportunities
             </p>
             <h2 className="mt-3 font-display text-5xl font-black leading-none tracking-[-0.04em] md:text-6xl">
-              Fake writing assignments
+              Assignment marketplace
             </h2>
           </div>
 
@@ -81,7 +81,7 @@ export function JobBoard({ jobs, eduMode, onOpenTask, canAccessTask }: JobBoardP
         </div>
 
         <div className="mb-6 flex flex-wrap items-center gap-3">
-          {["Verified client pool", "Daily payouts", "2,418 active writers"].map((signal) => (
+          {["Verified client pool", "Daily payouts", "2,418 active writers", "97% on-time completion"].map((signal) => (
             <span key={signal} className="rounded-full bg-ink px-4 py-2 text-sm font-black text-white">
               {signal}
             </span>

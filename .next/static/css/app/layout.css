@@ -756,6 +756,9 @@ video {
 .w-\[min\(860px\2c 100\%\)\] {
   width: min(860px,100%);
 }
+.w-\[min\(980px\2c calc\(100\%-2rem\)\)\] {
+  width: min(980px,calc(100% - 2rem));
+}
 .w-fit {
   width: -moz-fit-content;
   width: fit-content;
@@ -775,9 +778,15 @@ video {
 .flex-1 {
   flex: 1 1 0%;
 }
+.grow {
+  flex-grow: 1;
+}
 .rotate-0 {
   --tw-rotate: 0deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.cursor-pointer {
+  cursor: pointer;
 }
 .resize-y {
   resize: vertical;
@@ -839,6 +848,11 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+}
+.space-y-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.75rem * var(--tw-space-y-reverse));
 }
 .overflow-auto {
   overflow: auto;
@@ -1028,6 +1042,10 @@ video {
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+}
+.py-12 {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 .py-16 {
   padding-top: 4rem;

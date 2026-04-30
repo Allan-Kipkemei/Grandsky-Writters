@@ -16,9 +16,8 @@ const fraunces = Fraunces({
 });
 
 export const metadata: Metadata = {
-  title: "WritersHub Kenya | Scam Awareness Simulator",
-  description:
-    "An educational simulator that teaches learners how online writing advance-fee scams work.",
+  title: "WritersHub Kenya | Professional Writing Marketplace",
+  description: "A dynamic writing marketplace frontend for assignment workflows and classroom analytics.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {

@@ -38,7 +38,7 @@ function getFormData(form: HTMLFormElement): FormState {
     dueDate: String(data.get("dueDate") ?? "").trim(),
     description:
       String(data.get("description") ?? "").trim() ||
-      "Freshly posted assignment. Details are intentionally vague to mimic scam job boards.",
+      "Freshly posted assignment. Add clear requirements and submission expectations.",
     fullAssignment:
       String(data.get("fullAssignment") ?? "").trim() ||
       "Complete the assignment according to the listed expectations and submit on time.",

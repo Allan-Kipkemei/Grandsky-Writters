@@ -22,7 +22,7 @@ export function SiteHeader() {
           <span className="hidden sm:block">
             <strong className="block">WritersHub Kenya</strong>
             <small className="block text-xs font-black uppercase tracking-wider text-muted">
-              fraud awareness lab
+              verified writer network
             </small>
           </span>
         </a>
@@ -48,7 +48,7 @@ export function SiteHeader() {
             ["Jobs", "#jobs"],
             ["Dashboard", "/dashboard"],
             ["How it works", "#how-it-works"],
-            ["Red flags", "#red-flags"],
+            ["Classroom notes", "#red-flags"],
             ["Admin demo", "#admin"],
           ].map(([label, href]) => (
             <a
