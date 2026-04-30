@@ -37,3 +37,12 @@ export type TaskApplication = {
     at: string;
   }>;
 };
+
+export type TaskMessage = {
+  id: string;
+  jobId: string;
+  fromRole: "admin" | "writer";
+  fromName: string;
+  text: string;
+  createdAt: string;
+};

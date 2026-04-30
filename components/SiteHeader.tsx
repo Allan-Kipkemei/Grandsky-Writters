@@ -46,6 +46,7 @@ export function SiteHeader() {
         >
           {[
             ["Jobs", "#jobs"],
+            ["Dashboard", "/dashboard"],
             ["How it works", "#how-it-works"],
             ["Red flags", "#red-flags"],
             ["Admin demo", "#admin"],

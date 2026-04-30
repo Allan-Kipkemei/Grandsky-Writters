@@ -1,22 +1,31 @@
 import { formatKsh } from "@/lib/format";
-import type { Job } from "@/types";
+import type { Job, TaskMessage } from "@/types";
+import { TaskThread } from "./TaskThread";
 
 type TaskModalProps = {
   job: Job | null;
   canAccessTask: boolean;
   canApply: boolean;
+  messages: TaskMessage[];
+  actorRole: "admin" | "writer";
+  actorName: string;
   onClose: () => void;
   onUnlock: () => void;
   onApply: (jobId: string) => void;
+  onSendMessage: (payload: { jobId: string; fromRole: "admin" | "writer"; fromName: string; text: string }) => void;
 };
 
 export function TaskModal({
   job,
   canAccessTask,
   canApply,
+  messages,
+  actorRole,
+  actorName,
   onClose,
   onUnlock,
   onApply,
+  onSendMessage,
 }: TaskModalProps) {
   if (!job) return null;
 
@@ -72,6 +81,13 @@ export function TaskModal({
                 {canApply ? "Apply for this task" : "Login as writer to apply"}
               </button>
             </div>
+            <TaskThread
+              actorName={actorName}
+              actorRole={actorRole}
+              jobId={job.id}
+              messages={messages}
+              onSend={onSendMessage}
+            />
           </>
         ) : (
           <div className="mt-6 rounded-3xl border border-coral/30 bg-[#fff1eb] p-5">

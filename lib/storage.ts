@@ -1,11 +1,12 @@
 import { seedJobs } from "@/lib/seed-jobs";
-import type { Job, TaskApplication, WriterUser } from "@/types";
+import type { Job, TaskApplication, TaskMessage, WriterUser } from "@/types";
 
 const JOBS_KEY = "writershub.jobs";
 const PAYMENTS_KEY = "writershub.payments";
 const WRITERS_KEY = "writershub.writers";
 const SESSION_KEY = "writershub.session";
 const APPLICATIONS_KEY = "writershub.applications";
+const MESSAGES_KEY = "writershub.messages";
 
 function readJson<T>(key: string, fallback: T): T {
   if (typeof window === "undefined") return fallback;
@@ -66,4 +67,12 @@ export function loadApplications(): TaskApplication[] {
 
 export function saveApplications(applications: TaskApplication[]) {
   writeJson(APPLICATIONS_KEY, applications);
+}
+
+export function loadMessages(): TaskMessage[] {
+  return readJson<TaskMessage[]>(MESSAGES_KEY, []);
+}
+
+export function saveMessages(messages: TaskMessage[]) {
+  writeJson(MESSAGES_KEY, messages);
 }
